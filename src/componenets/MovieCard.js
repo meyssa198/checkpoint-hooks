@@ -13,6 +13,7 @@ console.log(movie)
                 <Card.Img variant="top" src={movie.posterURL} />
                 <Card.Body>
                     <Card.Title>{movie.title}</Card.Title>
+                    <p>{movie.description}</p>
                     <Rating name="read-only" value={movie.rate} readOnly />
                 </Card.Body>
             </Card> 
