@@ -8,8 +8,9 @@ const AddMovie = ({handleMovie}) => {
     const [posterURL,setPosterURL] =useState("");
     const [rate,setRate] =useState(0);
     const id=Math.random();
-    const [show, setShow] = useState(false);
+    const [trailer, setTrailer]= useState("")
 
+    const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
   
@@ -30,6 +31,8 @@ const AddMovie = ({handleMovie}) => {
               <input onChange={(e)=>setDescription(e.target.value)} type="text"/>
               <h4>PosterURL</h4>
               <input onChange={(e)=>setPosterURL(e.target.value)} type="url" placeholder="image address ..." />
+              <h4>Trailer</h4>
+              <input onChange={(e)=>setTrailer(e.target.value)} type="url" placeholder="trailer link ..." />
               <h4>Rate</h4>
               <input onChange={(e)=>setRate(Number(e.target.value))} type="number"/>
           </Modal.Body>
@@ -37,7 +40,7 @@ const AddMovie = ({handleMovie}) => {
             <Button variant="secondary" onClick={handleClose}>
               Close
             </Button>
-            <Button variant="primary" onClick={()=>(handleClose(),handleMovie({title,description,posterURL,rate,id}))}>
+            <Button variant="primary" onClick={()=>(handleClose(),handleMovie({title,description,posterURL,rate,id,trailer}))}>
               Save Changes
             </Button>
           </Modal.Footer>

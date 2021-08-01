@@ -7,16 +7,12 @@ const MovieCard = ({movie}) => {
 console.log(movie)
     return (
         <div style={{
-            display:"flex",
-            flexDirection:"row", paddingRight:"50px"
+            display:"flex", paddingRight:"50px", marginTop:"20px"
         }}>
            <Card style={{ width: '18rem' }} className="cardStyle">
                 <Card.Img variant="top" src={movie.posterURL} />
                 <Card.Body>
                     <Card.Title>{movie.title}</Card.Title>
-                    <Card.Text>
-                   {movie.description}
-                    </Card.Text>
                     <Rating name="read-only" value={movie.rate} readOnly />
                 </Card.Body>
             </Card> 
