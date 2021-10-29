@@ -16,8 +16,8 @@ const AddMovie = ({handleMovie}) => {
   
     return (
       <>
-        <Button variant="primary" onClick={handleShow}>
-          Launch demo modal
+        <Button style={{margin:"10px"}} h  variant="primary" onClick={handleShow}>
+          Add movie
         </Button>
   
         <Modal show={show} onHide={handleClose} animation={false}>

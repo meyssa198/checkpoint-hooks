@@ -15,7 +15,7 @@ function App() {
     <div className="App">
   
       <Filter setSearch={setSearch} setRate={setRate}/>
-      <AddMovie handleMovie={handleMovie}/>
+      <AddMovie andleMovie={handleMovie}/>
       <MovieList movies={movies} search={search} rate={rate} /> 
     </div>
     
